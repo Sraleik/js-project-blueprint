@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import "reflect-metadata";
-import { Container } from "inversify";
-import { config } from "dotenv";
+import 'reflect-metadata'
+import { Container } from 'inversify'
+import { config } from 'dotenv'
 
-config({ path: __dirname + "/../.env" });
+config({ path: __dirname + '/../.env' })
 
-const exampleContainer = new Container();
-const exampleKey = process.env.EXAMPLE_KEY || "fake";
+const exampleContainer = new Container()
+const exampleKey = process.env.EXAMPLE_KEY || 'fake'
 
-exampleContainer.bind<String>("ExampleKey").toConstantValue(exampleKey);
+exampleContainer.bind<string>('ExampleKey').toConstantValue(exampleKey)
 
 /*
 exampleContainer
@@ -20,4 +20,4 @@ exampleContainer
 exampleContainer.resolve(SubscriptionExample);
 */
 
-export { exampleContainer };
+export { exampleContainer }
